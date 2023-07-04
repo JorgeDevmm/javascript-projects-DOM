@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="imagenes/paleta-de-color.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Color RGB</title>
+  </head>
+  <body>
+    <div class="color contenedor">
+      <div class="color__flex">
+        <label class="color__label" for="color__rojo"
+          >Rojo (R)
+          <input
+            id="color__rojo"
+            type="range"
+            min="0"
+            max="255"
+            value="23"
+            step="1"
+          />
+          <p class="color__text-rojo"></p>
+        </label>
+        <label class="color__label" for="color__verde"
+          >Verde (G)
+          <input
+            id="color__verde"
+            type="range"
+            min="0"
+            max="255"
+            value="41"
+            step="1"
+          />
+          <p class="color__text-verde"></p>
+        </label>
+
+        <label class="color__label" for="color__azul"
+          >Azul (B)
+          <input
+            id="color__azul"
+            type="range"
+            min="0"
+            max="255"
+            value="56"
+            step="1"
+          />
+          <p class="color__text-azul"></p>
+        </label>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
