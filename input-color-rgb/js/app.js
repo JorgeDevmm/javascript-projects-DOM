@@ -1,44 +1,53 @@
-const body = document.querySelector('html');
+// referencia el body
+const html = document.querySelector('html');
 
-const inputRojo = document.getElementById('color__rojo');
-const inputVerde = document.getElementById('color__verde');
-const inputAzul = document.getElementById('color__azul');
+// referenciamos los inputs
+const inputRojo = document.querySelector('#color__rojo');
+const inputVerde = document.querySelector('#color__verde');
+const inputAzul = document.querySelector('#color__azul');
 
-const textoRojo = document.querySelector('.color__text-rojo');
-const textoVerde = document.querySelector('.color__text-verde');
-const textoAzul = document.querySelector('.color__text-azul');
+// referemciamos los parrafos
+const textRojo = document.querySelector('.color__text-rojo');
+const textVerde = document.querySelector('.color__text-verde');
+const textAzul = document.querySelector('.color__text-azul');
 
+// referenciamos los valores por defecto de del rojo,verde,azul
 let rojo = inputRojo.value;
 let verde = inputVerde.value;
 let azul = inputAzul.value;
 
-textoRojo.innerText = rojo;
-textoVerde.innerText = verde;
-textoAzul.innerText = azul;
+// asignar los valores de los inputs a los textos
+textRojo.innerText = rojo;
+textVerde.innerText = verde;
+textAzul.innerText = azul;
 
 function actualizarColor(rojo, verde, azul) {
-  let colorRGB = `rgb(${rojo},${verde},${azul})`;
+  // guardamos el valor por value
+  const colorRGB = `rgb(${rojo},${verde},${azul})`;
 
-  // establesco el color de fondo
-  body.style.backgroundColor = colorRGB;
+  // aplicamos el color al background de body
+  html.style.backgroundColor = colorRGB;
 }
 
+// aplicar eventListener
 inputRojo.addEventListener('change', (e) => {
   rojo = e.target.value;
 
-  textoRojo.textContent = rojo;
+  textRojo.innerText = rojo;
 
   actualizarColor(rojo, verde, azul);
 });
 inputVerde.addEventListener('change', (e) => {
   verde = e.target.value;
 
-  textoVerde.textContent = verde;
+  textVerde.innerText = verde;
+
   actualizarColor(rojo, verde, azul);
 });
 inputAzul.addEventListener('change', (e) => {
   azul = e.target.value;
 
-  textoAzul.textContent = azul;
+  textAzul.innerText = azul;
+
   actualizarColor(rojo, verde, azul);
 });
